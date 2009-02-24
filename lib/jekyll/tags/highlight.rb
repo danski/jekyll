@@ -32,7 +32,7 @@ module Jekyll
       if Jekyll.content_type == :markdown
         return "\n" + Albino.new(code, @lang).to_s(@options) + "\n"
       else
-        "<notextile>" + Albino.new(code, @lang).to_s(@options) + "</notextile>"
+        Albino.new(code, @lang).to_s(@options)
       end
     end
     
